@@ -1,14 +1,21 @@
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/material/IconButton';
+import DeleteIcon from '@mui/material/IconButton';
+
 interface IProps{
     type:string;
-    onClick:()=>any;
+    onClick:()=>void;
     label:string;
 }
 function Pulsante({onClick,type,label}:IProps){
 
     return(
-        <div>
-            <button type="button" onClick={onClick}>{label}</button>
-        </div>
+        
+            <Button size='small' variant="contained" endIcon={label=="inserisci" ? <SendIcon /> : <DeleteIcon />} type="button"  onClick={onClick}>
+            {label}
+</Button>
+            
+        
     )
 }
 

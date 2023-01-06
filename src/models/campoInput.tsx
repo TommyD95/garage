@@ -1,3 +1,6 @@
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+
 interface IProps{
     type:string;
     label:string;
@@ -12,10 +15,19 @@ function CampoInput({type,label,value,onChangeInput}:IProps){
     };
 
     return(
-        <div>
-            <label>{label}</label>
-            <input type={type} value={value} onChange={onChange} />
-        </div>
+        
+             <Box
+      component="form"
+      sx={{
+        '& > :not(style)': { m: 1, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField id="outlined-basic" label={label} variant="outlined" type={type} value={value} onChange={onChange} />
+      
+    </Box>
+           
     )
 }
 

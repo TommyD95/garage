@@ -14,12 +14,7 @@ export interface GarageState{
 
 const initialState:GarageReducerType={
     garage:[
-/* {id:1,
-km:0,
-marca:"",
-modello:"",
-targa:""
-} */
+
     ]
 };
 

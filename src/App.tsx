@@ -13,7 +13,7 @@ function App() {
   return (
     <>
     <div className="App">
- {garage.length==0 ? <div>nessun elemento</ div> : <Visualizza />}
+ {garage.length==0 ? <h3 style={{color:"red"}}>nessun elemento</ h3> : <Visualizza />}
  <Inserimento />
     </div>
     </>

@@ -13,6 +13,21 @@ function Inserimento() {
 
     const dispatch=useAppDispatch();
 
+    const reset=()=>{
+        setMarca("");
+        setKm(0);
+        setModello("");
+        setTarga("");
+    }
+
+    const control=()=>{
+        if(targa=="" || marca=="" || modello=="" ){
+            alert("compilare tutti i campi!")
+        }else{
+            clickInserisci();
+        }
+    }
+
     const clickInserisci=()=>{
         const newVettura:IGarage={
 id:0,
@@ -23,6 +38,7 @@ marca:marca,
         }
 
         dispatch(inserisciVettura(newVettura));
+        reset();
     }
 
     return (
@@ -31,7 +47,7 @@ marca:marca,
             <CampoInput label={"marca"} type={"text"} value={marca} onChangeInput={setMarca} />
             <CampoInput label={"modello"} type={"text"} value={modello} onChangeInput={setModello} />
             <CampoInput label={"km"} type={"number"} value={km} onChangeInput={setKm} />
-            <Pulsante type={"button"} onClick={clickInserisci}  label={"INSERISCI"} />
+            <Pulsante type={"button"} onClick={control}  label={"INSERISCI"} />
         </div>
     )
 }
