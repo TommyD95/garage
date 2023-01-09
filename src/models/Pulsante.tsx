@@ -2,12 +2,13 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/material/IconButton';
 import DeleteIcon from '@mui/material/IconButton';
 
+
 interface IProps{
     type:string;
     onClick:()=>void;
     label:string;
 }
-function Pulsante({onClick,type,label}:IProps){
+function Pulsante({type,onClick,label}:IProps){
 
     return(
         

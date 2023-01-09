@@ -1,9 +1,10 @@
 import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
-import { garageReducer } from "./reducers";
+import { formReducer, garageReducer } from "./reducers";
 
 export const store=configureStore({
     reducer:{
-        garage:garageReducer
+        garage:garageReducer,
+        form:formReducer
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware()
 });

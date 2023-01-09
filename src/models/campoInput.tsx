@@ -15,7 +15,7 @@ function CampoInput({type,label,value,onChangeInput}:IProps){
     };
 
     return(
-        
+        <div>
              <Box
       component="form"
       sx={{
@@ -27,6 +27,7 @@ function CampoInput({type,label,value,onChangeInput}:IProps){
       <TextField id="outlined-basic" label={label} variant="outlined" type={type} value={value} onChange={onChange} />
       
     </Box>
+    </div>
            
     )
 }
